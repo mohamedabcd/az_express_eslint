@@ -1,3 +1,11 @@
-const myname: string = "Mohamed";
+import express from "express";
 
-console.log(myname);
+const app = express();
+const port = 3000;
+app.get("/", (req, res) => {
+  res.send("Hello my Dear");
+});
+
+app.listen(port, () => {
+  console.log(`server is listening on ${port}`);
+});
